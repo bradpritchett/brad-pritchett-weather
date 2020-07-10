@@ -41,7 +41,7 @@ function getWeather(event) {
   function processUV(coordinatesLon, coordinatesLat) {
     $("#city-uv-index").attr("class", "alert");
     var uvURL =
-      "http://api.openweathermap.org/data/2.5/uvi/forecast?&appid=" +
+      "https://api.openweathermap.org/data/2.5/uvi/forecast?&appid=" +
       myapi +
       "&lat=" +
       coordinatesLat +
