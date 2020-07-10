@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weatherometer</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Permanent+Marker&amp;family=Julee"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/style.css" />
+  </head>
+  <body>
+    <div class="jumbotron jumbotron-fluid center">
+      <h1>Whether There's Weather</h1>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-3">
+          <form class="form-inline">
+            <div class="form-group mx-sm-2">
+              <input
+                type="text"
+                class="form-control form-control-lg"
+                id="city-search"
+              />
+            </div>
+            <div class="form-group mx-sm-1">
+              <button
+                type="button"
+                class="btn btn-primary btn-lg"
+                onclick="getWeather(event)"
+              >
+                <svg
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 16 16"
+                  class="bi bi-search"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </form>
+          <br />
+          <ul class="list-group" id="cities-searched"></ul>
+        </div>
+        <div class="col-md-9">
+          <div class="hidden">
+            <h2 id="city-name"><span id="today-date"></span></h2>
+            <p>Temperature: <span id="city-temperature"></span></p>
+            <p>Humidity: <span id="city-humidity"></span></p>
+            <p>Wind Speed: <span id="city-wind-speed"></span></p>
+            <p>UV Index: <span class="alert" id="city-uv-index"></span></p>
+            <h2>5-Day Forecast</h2>
+            <div class="row" id="card-div"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-git.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./assets/script.js"></script>
+  </body>
+</html>

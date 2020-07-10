@@ -1,0 +1,20 @@
+h1 {
+  font-family: "Permanent Marker", cursive;
+}
+
+.jumbotron {
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+.hidden {
+  display: none;
+}
+.card.text-white {
+  width: 18%;
+  padding: 7px;
+  margin: 0 8px;
+}
+li.city-history {
+  text-transform: capitalize;
+}
