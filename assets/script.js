@@ -72,7 +72,7 @@ function getWeather(event) {
   function processFiveDay(myCity) {
     var clearCards = $("#card-div").empty();
     var forecastUrl =
-      "https://api.openweathermap.org/data/2.5/forecast?q=" +
+      "https:api.openweathermap.org/data/2.5/forecast?q=" +
       myCity +
       "&units=imperial&appid=" +
       myapi;
